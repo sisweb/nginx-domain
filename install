@@ -1,0 +1,12 @@
+#! /bin/bash
+
+echo "Make directories for domains"
+mkdir -v /etc/nginx/sites-available
+mkdir -v /etc/nginx/sites-enabled
+
+echo "Install bash completions"
+echo "" >> ~/.bashrc
+echo ". ~/domain/.bash_completions" >> ~/.bashrc
+echo "" >> .bashrc
+
+ln -s ~/domain/domain /usr/local/bin/domain
